@@ -1,0 +1,140 @@
+.odds-table {
+   width: 100%;
+   min-width: 100%;
+   max-width: 100%;
+
+   .odds-table__body {
+      display: flex;
+      flex-direction: row;
+      padding: 30px 0;
+      overflow: auto;
+   }
+
+   .odds-table__row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink: 0;
+      flex-grow: 0;
+      border-bottom: 1px solid gray;
+      border: 1px solid #aaa;
+   }
+
+   .odds-table__teams {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      width: 160px;
+      min-width: 160px;
+      max-width: 160px;
+      height: 152px;
+      box-sizing: border-box;
+   }
+
+   .odds-table__teams-name {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: center;
+      column-gap: 4px;
+      font-size: 16px;
+      font-weight: 700;
+
+      span {
+         text-align: center;
+      }
+   }
+
+   .odds-table__teams-home-icon {
+      display: flex;
+
+      svg {
+         width: 20px;
+         height: 20px;
+      }
+   }
+
+   .odds-table__game-date {
+      font-size: 12px;
+      font-weight: 600;
+      color: #92aeb7;
+   }
+
+   .odds-table__platforms {
+      overflow: hidden;
+   }
+
+   .odds-table__platfroms-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      flex-grow: 0;
+   }
+
+   .odds-table__platfroms-item {
+      padding: 10px;
+      width: 174px;
+      min-width: 174px;
+      box-sizing: border-box;
+
+      &:nth-child(odd) {
+         background-color: rgb(200, 205, 206);
+      }
+   }
+
+   .odds-table__platfroms-item-title {
+      margin: 0;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: none;
+   }
+
+   .odds-table__platfroms-item-game-odds {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      column-gap: 8px;
+   }
+
+   .odds-table__platfroms-item-game-odds > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+}
+
+@media (min-width: 900px) {
+
+   .odds-table {
+      
+      .odds-table__body {
+         flex-direction: column;
+         padding: 20px 30px;
+         overflow: hidden;
+      }
+
+      .odds-table__row {
+         flex-direction: row;
+         flex-wrap: nowrap;
+         align-items: flex-start;
+         padding: 16px 0;
+         border: none;
+      }
+
+      .odds-table__teams {
+         margin-right: 18px;
+         height: unset;
+      }
+
+      .odds-table__platfroms-list {
+         flex-direction: row;
+         overflow: auto;
+      }
+   }
+}
